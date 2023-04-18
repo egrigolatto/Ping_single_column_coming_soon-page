@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --fuente: 'Libre Franklin', sans-serif;
+    /* Primary */
+    --Blue: hsl(223, 87%, 63%);
+   /* Secondary */
+    --PaleBlue: hsl(223, 100%, 88%);
+    --LightRed: hsl(354, 100%, 66%);
+   /* Neutral */
+    --Gray: hsl(0, 0%, 59%);
+    --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+
+body{
+    font-family: var(--fuente);
+    font-size: 20px;
+}
+
+.contenedor{
+    padding-top: 80px;
+    width: 70%; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.contenedor img:first-of-type{
+    margin-bottom: 20px;
+}
+
+.contenedor h1 {
+    color: var(--VeryDarkBlue);
+    margin-bottom: 0;
+}
+.contenedor h1 span{
+    color: var(--Gray);
+    font-weight: 400;
+}
+.contenedor h4{
+    font-size: 0.9em;
+    color: var(--VeryDarkBlue);
+    font-weight: 300;
+}
+form{
+    width: 60%;
+    display: flex;
+    position: relative;
+    margin-bottom: 80px;
+}
+input{
+    padding: 14px 30px;
+    width: 67%;
+    border-radius: 30px;
+    border: 1px solid var(--PaleBlue);
+    margin-right: 10px; 
+    font-size: .7em;
+    font-weight: 600;
+}
+input::placeholder{
+    color: var(--PaleBlue);
+}
+input:focus{
+    outline:none;
+    border: 2px solid var(--Gray);
+}
+button{
+    color: var(--PaleBlue);
+    background-color: var(--Blue);
+    border: none;
+    width: 33%;
+    border-radius: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+    box-shadow: 0 10px 10px rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    padding: 14px 30px;
+}
+button:hover{
+    background-color:  hsl(223, 87%, 63%,.6);
+    color: #fff;
+}
+.mensajeError{
+    position: absolute;
+    font-size: 0.7em;
+    top: 40px;
+    left: 30px;
+    color: var(--LightRed);
+    opacity: 0;
+}
+
+.contenedor img:last-of-type{
+    width: 60%;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+.redes a{
+    color: var(--Blue);
+    margin: 4px;
+    padding: 6px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 0.7em;
+    transition: all 0.5s ease-out;
+}
+
+.redes a:hover{
+    background-color: var(--Blue);
+    color: #fff;
+   
+}
+.copyright{
+    font-size: .7em;
+    color: var(--Gray);
+
+}
+
+.activo.mensajeError{
+    opacity: 1;
+}
+.activo.input{
+    border: 1px solid var(--LightRed);
+}
+ 
